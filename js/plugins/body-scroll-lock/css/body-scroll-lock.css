@@ -1,0 +1,1 @@
+html.body-scroll-lock{position:fixed;width:100%;top:var(--body-scroll-lock-top-rect);padding-right:var(--body-scroll-lock-vertical-scrollbar-gap)}html.body-scroll-lock.ios{position:fixed;width:100%;top:var(--body-scroll-lock-top-rect)}html.body-scroll-lock.standard body{overflow:hidden}html.body-scroll-lock{padding-right:var(--body-scroll-lock-vertical-scrollbar-gap)}
