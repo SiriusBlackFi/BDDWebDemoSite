@@ -232,8 +232,9 @@
                         </br>
                         <div>密碼 <input type="password" id="password_text" name="password_text" height="25px"></div>
                         </br>
-                        <div class="fail_msg" style="color: #AE0000; display: none; font-size:10pt;">註冊錯誤</div>
-                        <div class="success_msg" style="color: #AE0000; display: none; font-size: 10pt;">註冊成功</div>
+                        <div id="result_msg" style="color: #AE0000; font-size: 10pt;"></div>
+                        <!--<div class="fail_msg" style="color: #AE0000; display: none; font-size:10pt;">註冊錯誤</div>
+                        <div class="success_msg" style="color: #AE0000; display: none; font-size: 10pt;">註冊成功</div>-->
                         </br>
                         <div><input type="button" id="subscription_btn" name="subscription_btn" value="註冊" onclick="sign_up()"></div>
                     </div>
@@ -243,12 +244,14 @@
                             var phone_num = $('#phone_text').val();
                             if ((!phone_num || !/^(09)([0-9]{2})([-]?)([0-9]{6})$/.test(phone_num)) || $('#name_text').val() == "" || $('#password_text').val() == "") {
                                 // fail
-                                $('.fail_msg').show();
-                                $('.success_msg').hide();
+                                document.getElementById("result_msg").innerHTML = "註冊錯誤";
+                                //$('.fail_msg').show();
+                                //$('.success_msg').hide();
                             } else {
                                 // success
-                                $('.fail_msg').hide();
-                                $('.success_msg').show();
+                                document.getElementById("result_msg").innerHTML = "註冊成功";
+                                //$('.fail_msg').hide();
+                                //$('.success_msg').show();
                             }
                         }
                     </script>
